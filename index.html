@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Consumo de combustível</title>
+</head>
+
+<body>
+    <main id="app">
+        <div id="titulo">
+            <h1>Gasolina ou Etanol</h1>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <label for="preco">Qual valor você quer abastecer?</label>
+                <input type="text" name="preco" id="preco" placeholder="Digite o valor" required
+                    onkeypress="return /[0-9.,]/.test(event.key)">
+
+                <label for="gasolina">Valor da gasolina: </label>
+                <input type="text" name="gasolina" id="gasolina" placeholder="Digite o valor" required
+                    onkeypress="return /[0-9.,]/.test(event.key)">
+
+                <label for="etanol">Valor da etanol: </label>
+                <input type="text" name="etanol" id="etanol" placeholder="Digite o valor" required
+                    onkeypress="return /[0-9.,]/.test(event.key)">
+                <label for="kmPorGasolina">Quantos km seu carro faz com 1 litro de gasolina?</label>
+                <input type="text" name="kmPorGasolina" id="kmPorGasolina" placeholder="Quantos km/l " required
+                    onkeypress="return /[0-9.,]/.test(event.key)">
+
+                <label for="KmPorEtanol">Quantos km seu carro faz com 1 litro de etanol?</label>
+                <input type="text" name="KmPorEtanol" id="KmPorEtanol" placeholder="Quantos km/l " required
+                    onkeypress="return /[0-9.,]/.test(event.key)">
+
+                <button onclick="calcularMediaKm()" class="btn">Enviar</button>
+            </div>
+        </div>
+        <div class="msg"></div>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
